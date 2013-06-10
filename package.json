@@ -2,9 +2,14 @@
 	"name": "webshot-queue",
 	"description": "A message-oriented screenshot server",
 	"version": "0.0.1",
+	"repository": "https://github.com/timkg/webshot-queue",
 	"dependencies": {
 		"amqp": "*",
 		"webshot": "*",
-		"cloudinary": "*"
+		"cloudinary": "*",
+		"node-uuid": "*"
+	},
+	"devDependencies": {
+
 	}
 }
