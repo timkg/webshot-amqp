@@ -1,0 +1,10 @@
+{
+	"name": "webshot-queue",
+	"description": "A message-oriented screenshot server",
+	"version": "0.0.1",
+	"dependencies": {
+		"amqp": "*",
+		"webshot": "*",
+		"cloudinary": "*"
+	}
+}
