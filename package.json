@@ -1,8 +1,8 @@
 {
-	"name": "webshot-queue",
+	"name": "webshot-amqp",
 	"description": "A message-oriented screenshot server",
 	"version": "0.0.1",
-	"repository": "https://github.com/timkg/webshot-queue",
+	"repository": "https://github.com/timkg/webshot-amqp",
 	"dependencies": {
 		"amqp": "*",
 		"webshot": "*",
