@@ -1,7 +1,7 @@
 var EventEmitter = require( "events" ).EventEmitter
   , consumer = Object.create(new EventEmitter());
 
-consumer.start = function(connection, config) {
+consumer.init = function(connection, config) {
 	var exchange, queue;
 
 	exchange = connection.exchange(config.exchangeName, {/* options */}, onExchangeEstablished);
@@ -24,8 +24,7 @@ consumer.start = function(connection, config) {
 	}
 
 	function onMessageReceived(message, headers, deliveryInfo) {
-		var msg = JSON.parse(message.data);
-		consumer.emit('msg', msg);
+		consumer.emit('msg', message);	
 	}
 };
 

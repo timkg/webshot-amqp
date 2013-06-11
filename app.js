@@ -12,7 +12,7 @@ var connection = amqp.createConnection(config.amqp.credentials);
 connection.on('ready', function() {
 	producer.init(connection, config.amqp.producer);
 	uploader.init(config.upload.cloudinary);
-	consumer.start(connection, config.amqp.consumer);
+	consumer.init(connection, config.amqp.consumer);
 	consumer.on('msg', function(msg) {
 		if (!msg.url) {
 			console.log('malformed message, no url property: ' + JSON.stringify(msg));
